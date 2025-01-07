@@ -4,79 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Work</title>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
+         body {
+            font-family: 'Roboto', sans-serif;
+             margin: 0;
             padding: 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f8ff; /* Light blue background */
+           background-color: #f8f0e3; /* Light off-white background */
+        }
+          .container, .container-2{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            border-radius: 10px; /* Rounded edges */
+             background-color: #fff; /* White background */
+              margin-bottom: 20px;
         }
         .container {
-             width: 500px;
-            padding: 20px;
+            width: 550px;
+             border: 4px solid transparent;
+            border-image: linear-gradient(to right, #e57373, #f06292, #ba68c8, #9575cd, #64b5f6, #4dd0e1, #4db6ac, #81c784, #dce775, #ffd54f, #ffb74d, #ff8a65) 1;
+            padding: 25px;
             position: relative;
-             border-width: 3px; /* Set your desired border width */
-             border-style: solid;
-            border-image: linear-gradient(45deg, #FF0000, #FFFF00, #00FF00, #00FFFF, #0000FF, #FF00FF, #FF0000) 1;
-              /* Using the border image to create the gradient */
-             border-image-slice: 1; /* Ensure the whole gradient border is visible */
-          }
+
+        }
 
         .header {
-            font-size: 2.4em; /* Increased font size */
+            font-size: 2.2em;
             font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
-            color: #000080; /* dark blue font color */
+             color: #e65100; /* Saffron header color */
+             text-shadow: 1px 1px 2px #fff8e1; /* Subtle text shadow */
+             font-family: 'Pacifico', cursive;
         }
 
         .form-group {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
+           border-bottom: 1px dashed #b0bec5; /* Dashed bottom border for form groups */
+            padding-bottom: 8px;
         }
 
         .form-group label {
-            width: 200px;
-            font-weight: bold;
-            color: #000080;
-             font-size: 1.2em; /* Increased font size */
+            width: 230px;
+             font-weight: bold;
+             color: #d84315; /* Darker Saffron label color */
+            text-shadow: 0.5px 0.5px 0.8px #fff8e1;
+            
         }
         .form-group label, .medium-section label, .signature-section label {
             font-weight: bold;
         }
 
         .form-group input {
-            flex: 1;
-            padding: 8px; /* Increased padding */
+             flex: 1;
+            padding: 7px;
+            border: 1px solid #b0bec5;
               margin-left: 10px;
            font-weight: bold;
-            font-size: 1.1em; /* Increased font size */
+            background-color: #f0f0f0; /* light gray background for input */
+           border-radius: 4px; /* Rounded edges for input*/
+            outline: none;
         }
-          .form-group input[type="text"],
-          .signature-section input {
-               outline: none;
-                background-color: #f0f0f0;
-               border-bottom: none; /*Remove dotted bottom border */
-                 border: 1px solid #ccc;
-                 border-radius: 5px;
-           }
+
 
         .medium-section {
             display: flex;
             align-items: center;
-            margin-top: 10px;
+            margin-top: 15px;
+            padding-bottom: 10px;
+           border-bottom: 1px dashed #b0bec5;
         }
         
         .medium-section label{
-            width: 200px;
-             font-weight: bold;
-             color: #000080;
-             font-size: 1.2em; /* Increased font size */
+           width: 230px;
+            font-weight: bold;
+            color: #d84315; /* Darker Saffron label color */
+            text-shadow: 0.5px 0.5px 0.8px #fff8e1;
         }
         
         .medium-section .medium-options {
@@ -84,11 +94,10 @@
             display: flex;
             justify-content: flex-start;
             margin-left: 10px;
-             font-size: 1.1em; /* Increased font size */
         }
           .medium-options .checkbox-label {
            
-            margin-right: 20px; /* Space out checkboxes */
+            margin-right: 20px;
         }
         .medium-options input[type="checkbox"]{
              margin-right: 5px;
@@ -96,154 +105,263 @@
 
         .signature-section {
           margin-top: 20px;
+         border-bottom: 1px dashed #b0bec5;
+           padding-bottom: 10px;
         }
         
           .signature-section label {
             font-weight: bold;
-            color: #000080;
-            display: block;
+             color: #d84315; /* Darker Saffron label color */
+             display: block;
              margin-bottom: 5px;
-             font-size: 1.2em; /* Increased font size */
+             text-shadow: 0.5px 0.5px 0.8px #fff8e1;
         }
         
            .signature-section input{
            
-          
-           font-weight: bold;
-           padding: 10px; /* Increased padding for bigger box */
-           font-size: 1.3em; /* Increased font size for better readability */
-            width: 100%; /* Added width to fill the container */
-             box-sizing: border-box;/* Added box sizing so padding does not effect layout */
+            border: 1px solid #b0bec5;
+             outline: none;
+            background-color: #f0f0f0;
+             font-weight: bold;
+             padding: 10px;
+            font-size: 1.2em;
+            width: 100%;
+             box-sizing: border-box;
+            border-radius: 4px; /* Rounded edges for signature input*/
            }
 
 
         .footer {
             margin-top: 20px;
             text-align: center;
-             color: #000080;
-            font-size: 1.1em; /* Increased font size */
-        }
+             color: #d84315;
+             padding: 10px;
+            border-top: 2px dashed #b0bec5; /* dashed top border*/
+          }
         .footer, .footer-items{
             font-weight: bold;
-           
+            font-size: 0.9em;
         }
 
         .footer-company-info {
              font-weight: bold;
-             font-size: 1.2em;/* Increased font size */
-              margin-bottom: 5px;
+             font-size: 1em;
+             margin-bottom: 5px;
+            color: #ef6c00;
+            text-shadow: 0.5px 0.5px 0.8px #fff8e1;
         }
 
         .footer-contact {
-             margin-bottom: 5px;
+            margin-bottom: 5px;
         }
          .print-button {
             margin-top: 20px;
             text-align: center;
         }
         .print-button button {
-            padding: 12px 24px; /* Increased padding */
-            background-color: #000080;
+            padding: 10px 20px;
+             background-color: #e65100; /* Saffron button color*/
             color: white;
             border: none;
             cursor: pointer;
-            font-size: 1.2em; /* Increased font size */
+            font-size: 1em;
             font-weight: bold;
+           border-radius: 5px;
         }
-         @media print {
-            body * {
-                visibility: hidden;
-            }
-             
-            .container, .container * {
-                 visibility: visible;
-                 
-            }
-            body {
-                background-color: white; /* Added white background for printing */
-                 margin: 0;
-                 padding: 0;
-             }
-             .container {
-                 position: absolute;
-                 left: 0;
-                 top: 0;
-                 width: 210mm;/* A4 width */
-                  height: 297mm;/* A4 height */
-                 border: 3px solid; /* added to show border */
-                 border-image: linear-gradient(45deg, #FF0000, #FFFF00, #00FF00, #00FFFF, #0000FF, #FF00FF, #FF0000) 1; /* added to show border */
-                 border-image-slice: 1; /* added to show border */
-                 padding: 15mm;/* Added padding for printing */
-                  box-sizing: border-box;/*Added box sizing */
-              }
-                
-              .container input,
-               .signature-section input{
-                   border-bottom: none;
-                    background-color: #f0f0f0;
-                   border: 1px solid #ccc;
-                     border-radius: 5px;
-               }
-              
-        }
-         /* Added styling for session section to fit within the container */
+           /* Added styling for session section to fit within the container */
          .session-section{
           display: flex;
            align-items: center;
            margin-bottom: 10px;
+         border-bottom: 1px dashed #b0bec5;
+            padding-bottom: 8px;
+
         }
          .session-section label{
-             width: 150px; /* Reduced width to accommodate content */
+              width: 230px;
              font-weight: bold;
-             color: #000080;
-             flex-shrink: 0; /*Prevent label from shrinking */
-              font-size: 1.2em; /* Increased font size */
+            color: #d84315; /* Darker Saffron label color */
+             flex-shrink: 0;
+             text-shadow: 0.5px 0.5px 0.8px #fff8e1;
         }
         .session-section .session-inputs {
             display: flex;
-             flex: 1;/* Take available space */
-             margin-left: 10px; /*Added margin for spacing*/
-            
+             flex: 1;
+             margin-left: 10px;
         }
           .session-section input{
-           padding: 5px;
-            border: 1px solid #ccc;
-            border-bottom: none;
+           padding: 7px;
+            border: 1px solid #b0bec5;
              outline: none;
-             background-color: #f0f0f0;
-           font-weight: bold;
-            border-radius: 5px;
-             font-size: 1.1em;/* Increased font size */
-            box-sizing: border-box;
-              width: 80px; /* reduced width */
+            background-color: #f0f0f0;
+            font-weight: bold;
+             box-sizing: border-box;
+               width: 80px; /* reduced width */
+              border-radius: 4px;
         }
          .session-section label + .session-inputs label{
-            width: auto;/* Adjusted with of inner label*/
-           flex-shrink: 0;/* prevent from shrinking*/
+             width: auto;
+            flex-shrink: 0;
+        }
+        /* Styles for आभारोक्ति section */
+        .container-2 {
+             max-width: 800px;
+            margin: 20px auto;
+             background-image: linear-gradient(to bottom right, #fff, #fff3e0);
+             padding: 30px;
+             border: 4px solid transparent;
+            border-image: linear-gradient(to right, #e57373, #f06292, #ba68c8, #9575cd, #64b5f6, #4dd0e1, #4db6ac, #81c784, #dce775, #ffd54f, #ffb74d, #ff8a65) 1;
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .container-2 h2 {
+            font-family: 'Pacifico', cursive;
+             color: #e65100; /* Saffron header color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+             text-align: center;
+            font-size: 2.5em;
+             margin-bottom: 20px;
+        }
+         .container-2 p {
+            font-size: 1.1em;
+             color: #d84315;
+             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 15px;
+             display: inline-block;
+             line-height: 1.6;
+        }
+         .container-2 select, .container-2 input {
+             padding: 0;
+             margin-bottom: 0px;
+            border-radius: 0px;
+            border: none;
+             box-shadow: none;
+              background-color: transparent;
+            font-size: 1em; /* Use the same font-size as <p> to match text */
+              font-family: inherit;
+              outline:none;
+        }
+      
+           .container-2 input::placeholder {
+               font-style: italic; /* Italic placeholder */
+           }
+
+
+         .container-2 .highlight {
+             background-color: #fff59d;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-style: italic;
+        }
+         .container-2 .emoji{
+            font-size: 1.2em;
+            margin-right: 5px;
+          }
+          .container-2 select{
+            background-color: #fff;
+             border-color: #81c784;
+           appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+             background-image: none;
+              padding: 0;
          }
+       .container-2 .gender-select {
+        display: inline-block;
+        margin-right: 10px;
+
+      }
+        .container-2 .print-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+             padding: 10px 20px;
+            background-color: #e65100; /* Saffron */
+            color: white;
+             border: none;
+             border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+         }
+           .container-2 .print-button:hover {
+            background-color: #bf360c;
+         }
+
+         /* Added for print separation */
+         @media print {
+              body {
+                    background-color: transparent;
+                    display: block;
+                     padding: 0;
+                    min-height: auto;
+                    font-family: 'Roboto', sans-serif;/* Ensure font consistency on print */
+               }
+               .print-button{
+                display: none;
+                }
+               .container, .container-2{ /* added to keep same style of container in print */
+                    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* remove box shadow */
+                    border-radius: 10px; /* Rounded edges */
+                     background-color: #fff; /* White background */
+                }
+               .container {
+                    width: 90%;
+                     margin-left: auto;
+                     margin-right: auto;
+                     border: 4px solid transparent;
+                    border-image: linear-gradient(to right, #e57373, #f06292, #ba68c8, #9575cd, #64b5f6, #4dd0e1, #4db6ac, #81c784, #dce775, #ffd54f, #ffb74d, #ff8a65) 1;
+                  }
+                 .header{
+                       font-size: 1.8em;
+                     color: #e65100; /* Saffron header color */
+                    text-shadow: 1px 1px 2px #fff8e1; /* Subtle text shadow */
+                    font-family: 'Pacifico', cursive;
+                    }
+                    .container-2{
+                     page-break-before: always; /* Ensure container-2 is on a new page */
+                     width: 90%;
+                     margin-left: auto;
+                     margin-right: auto;
+                     border: 4px solid transparent;
+                     border-image: linear-gradient(to right, #e57373, #f06292, #ba68c8, #9575cd, #64b5f6, #4dd0e1, #4db6ac, #81c784, #dce775, #ffd54f, #ffb74d, #ff8a65) 1;
+                   }
+                      .container-2 select{
+                            appearance: none;
+                              -webkit-appearance: none;
+                                -moz-appearance: none;
+                                 background-image: none;
+                     }
+                         .signature-section input{ /* Ensure signature input has same style in print */
+                        font-size: 1em;
+                        padding: 5px;
+                      }
+             }
     </style>
+
 </head>
 <body>
     <div class="container">
         <div class="header"><b>प्रोजेक्ट कार्य</b></div>
 
         <div class="form-group">
-            <label for="subject"><b>विषय / Subject 📝</b></label>
+            <label for="subject"><b>विषय / Subject</b></label>
             <input type="text" id="subject">
         </div>
 
         <div class="form-group">
-            <label for="title"><b>प्रोजेक्ट कार्य शीर्षक / Title of Project Work 📚</b></label>
+            <label for="title"><b>प्रोजेक्ट कार्य शीर्षक / Title of Project Work</b></label>
             <input type="text" id="title">
         </div>
 
         <div class="form-group">
-            <label for="school"><b>विद्यालय का नाम / Name of School 🏫</b></label>
+            <label for="school"><b>विद्यालय का नाम / Name of School</b></label>
             <input type="text" id="school" value="RUPAM BAL MANDIR SR. SEC. SCHOOL, GUDA KALLAN">
         </div>
 
          <div class="form-group">
-            <label for="student"><b>विद्यार्थी का नाम / Student's Name 🧑‍🎓</b></label>
+            <label for="student"><b>विद्यार्थी का नाम / Student's Name</b></label>
             <input type="text" id="student">
          </div>
 
@@ -253,33 +371,33 @@
         </div>
 
         <div class="form-group">
-            <label for="mother"><b>माता का नाम / Mother's Name 👩‍👧‍👦</b></label>
+            <label for="mother"><b>माता का नाम / Mother's Name</b></label>
             <input type="text" id="mother">
         </div>
 
         <div class="form-group">
-            <label for="father"><b>पिता का नाम / father's Name 👨‍👧‍👦</b></label>
+            <label for="father"><b>पिता का नाम / father's Name</b></label>
             <input type="text" id="father">
         </div>
          <div class="form-group">
-            <label for="class"><b>कक्षा / Class 🏫</b></label>
+            <label for="class"><b>कक्षा / Class</b></label>
             <input style="width: 50px" type="text" id="class" value="10th">
         </div>
 
 
          
        <div class="session-section">
-              <label for="session"><b>सत्र / Session 📅</b></label>
+              <label for="session"><b>सत्र / Session</b></label>
               <div class="session-inputs">
                    <input type="text" id="session_start" value="July 2024">
                    <label style="width: auto; margin: 0 10px;"><b> से </b></label>
-                   <input type="text" id="session_end" value="2025">
+                   <input type="text" id="session_end" value="2024-25">
                </div>
          </div>
          
 
         <div class="form-group">
-            <label for="submission"><b>प्रोजेक्ट जमा कराने की अन्तिम तिथि / Last Date of Submitting the Project Work 🗓️</b></label>
+            <label for="submission"><b>प्रोजेक्ट जमा कराने की अन्तिम तिथि / Last Date of Submitting the Project Work</b></label>
             <input type="text" id="submission">
         </div>
 
@@ -294,30 +412,88 @@
         </div>
         
         <div class="form-group">
-             <label for="obtained"><b>प्राप्तांक / Marks Obtained 💯</b></label>
+             <label for="obtained"><b>प्राप्तांक / Marks Obtained</b></label>
             <input type="text" id="obtained">
         </div>
+        <div class="form-group">
+            <label for="teacher"><b>शिक्षक का नाम / Teacher's Name</b></label>
+            <input type="text" id="teacher">
+         </div>
 
         <div class="signature-section">
            <label><b>हस्ताक्षर जांचकर्ता / विषय अध्यापक (जांचकर्ता) का नाम व पद :</b> <input type="text"></label>
         </div>
-
         <div class="footer">
             <div class="footer-company-info"><b>महालक्ष्मी फैन्सी एण्ड जनरल स्टोर, गुड़ा कलाँ</b></div>
             <div class="footer-contact"><b>Mob.: 7023360084, 8015158575</b></div>
-            <div class="footer-items"><b>हमारे यहाँ प्रोजेक्ट फाईल, केलकुलेटर, किताबे, प्रोजेक्ट पेपर, रंगीन पेज, कॉपीया, रजिस्टर,
-                सभी प्रकार की स्टेशनरी, स्पोर्टस् व फैन्सी आईटम के रिटेल व थोक विक्रेता
-                Created By Rahul Malviya & Anil Malviya</b></div>
         </div>
          <div class="print-button">
-              <button onclick="generatePrint()">Print</button>
-          </div>
+             <button onclick="window.print()">Print</button>
+        </div>
     </div>
-      <script>
-          function generatePrint(){
-            window.print();
-          }
-      </script>
 
+  <div class="container-2">
+        <h2>आभारोक्ति <span class="emoji">🎉</span></h2>
+        <p>
+             <span class="emoji">🧑‍🎓</span>
+              <span id="studentGenderText"></span>
+              मैं कक्षा दशम् का/की
+             <input type="text" id="studentNameAabhar" placeholder="छात्र का नाम" style="border-color:#4fc3f7; font-weight: bold;"> गणित के मेरे अध्यापक
+            <input type="text" id="teacherNameAabhar" placeholder="शिक्षक का नाम" style="border-color:#4fc3f7; font-weight: bold;"> जी का हार्दिक आभार प्रकट करता/करती हूँ, जिनके
+            अमूल्य मार्गदर्शन से मैंने अपना प्रोजेक्ट कार्य पूरा किया। <span class="emoji">🙏</span>
+        </p>
+        <p>
+            मैं उन सभी लोगों का/की आभारी हूँ, जिन्होंने इस प्रोजेक्ट कार्य को
+            पूरा करने में प्रत्यक्ष या अप्रत्यक्ष रूप से योगदान प्रदान किया।<span class="emoji">🤝</span>
+        </p>
+        <p>
+           दूसरी बात मैं अपने माता पिता का भी हार्दिक धन्यवाद करती हूँ।
+           उनसे मुझे कई चीजों के बारे में पता चला। मैं अपने भविष्य में
+           ऐसी शिक्षा पद प्रोजेक्ट बनाने की आशा करती हूँ। <span class="emoji">🙏🏻</span></span>
+         </p>
+        <button class="print-button" onclick="window.print()">Print</button>
+    </div>
+     <script>
+       const studentNameInput = document.getElementById('student');
+       const studentNameAabharInput = document.getElementById('studentNameAabhar');
+       const teacherNameInput = document.getElementById('teacher');
+        const teacherNameAabharInput = document.getElementById('teacherNameAabhar');
+       const studentGenderText = document.getElementById('studentGenderText');
+
+
+     // Function to determine gender based on the name
+    function determineGender(name) {
+    const masculineEndings = ['कुमार', 'सिंह', 'मिश्रा', 'शर्मा', 'यादव', 'राजपूत','वर्मा','चौधरी','पाटिल','राव','देसाई', 'जोशी','गुप्ता','मेहता','अग्रवाल','त्रिवेदी', 'अंसारी','खान','शेख'];
+    const feminineEndings = ['कुमारी','देवी', 'बेन', 'बाई', 'कौर'];
+     const lowerName = name.toLowerCase();
+      for (const ending of masculineEndings) {
+         if (lowerName.endsWith(ending.toLowerCase())) return "विद्यार्थी";
+        }
+    for (const ending of feminineEndings) {
+            if (lowerName.endsWith(ending.toLowerCase())) return "विद्यार्थिनी";
+        }
+        // Default to "विद्यार्थी" if no match found
+       return "विद्यार्थी";
+    }
+      // Function to set student name and gender in container 2
+      function updateStudentInfo(){
+        studentNameAabharInput.value = studentNameInput.value;
+        const gender = determineGender(studentNameInput.value);
+         studentGenderText.textContent = gender;
+      }
+
+       // Initial update
+         updateStudentInfo();
+      
+         studentNameInput.addEventListener('input', updateStudentInfo);
+
+          // Function to set teacher name in container 2 when teacher name changes in container 1
+        teacherNameInput.addEventListener('input', function() {
+             teacherNameAabharInput.value = teacherNameInput.value;
+        });
+
+        // Initialize teacher name on load
+         teacherNameAabharInput.value = teacherNameInput.value;
+    </script>
 </body>
 </html>
